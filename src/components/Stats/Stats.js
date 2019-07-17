@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import styles from "./Stats.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import styles from './Stats.module.css';
 
 const Container = styled.div`
   text-align: center;
   padding: 8px 24px;
-  color: ${props => (props.isPositive ? "#388E3C" : "#D32F2F")};
+  color: ${props => (props.isPositive ? '#388E3C' : '#D32F2F')};
   user-select: none;
 `;
 
@@ -20,11 +20,11 @@ const Stat = ({ label, value, isPositive }) => (
 Stat.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  isPositive: PropTypes.bool
+  isPositive: PropTypes.bool,
 };
 
 Stat.defaultProps = {
-  isPositive: false
+  isPositive: false,
 };
 
 export default Stat;

@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Button from "../Button/Button";
-import styles from "./ExpensesTable.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from '../Button/Button';
+import styles from './ExpensesTable.module.css';
 
 const ExpensesTable = ({ expenses = [], deleteExpense }) => {
   return (
@@ -35,9 +35,9 @@ ExpensesTable.propTypes = {
   expenses: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-      amount: PropTypes.number
-    })
-  ).isRequired
+      amount: PropTypes.number,
+    }),
+  ).isRequired,
 };
 
 export default ExpensesTable;

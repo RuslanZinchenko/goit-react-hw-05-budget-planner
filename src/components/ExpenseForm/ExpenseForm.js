@@ -1,27 +1,27 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Form from "../Form/Form";
-import Label from "../Label/Label";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
-import Notification from "../Notification/Notification";
-import styles from "./ExpenseForm.module.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Form from '../Form/Form';
+import Label from '../Label/Label';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
+import Notification from '../Notification/Notification';
+import styles from './ExpenseForm.module.css';
 
 export default class ExpenseForm extends Component {
   state = {
-    name: "",
-    amount: "",
+    name: '',
+    amount: '',
     incorrectName: false,
-    incorrectAmount: false
+    incorrectAmount: false,
   };
 
   static propTypes = {
-    addExpense: PropTypes.func.isRequired
+    addExpense: PropTypes.func.isRequired,
   };
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -43,7 +43,7 @@ export default class ExpenseForm extends Component {
     const { addExpense } = this.props;
     addExpense(name, formatedAmount);
 
-    this.setState({ name: "", amount: "" });
+    this.setState({ name: '', amount: '' });
   };
 
   render() {
