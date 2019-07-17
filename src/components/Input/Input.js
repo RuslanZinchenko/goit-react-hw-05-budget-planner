@@ -1,13 +1,12 @@
-/*eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Input.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Input.module.css";
 
 const Input = ({
-  type = 'text',
-  value = '',
+  type = "text",
+  value = "",
   onChange = () => null,
-  name = '',
+  name = ""
 }) => (
   <input
     className={styles.input}
@@ -22,11 +21,11 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   onChange: PropTypes.func.isRequired,
-  name: PropTypes.string,
+  name: PropTypes.string
 };
 
 Input.defaultProps = {
-  name: '',
+  name: ""
 };
 
 export default Input;

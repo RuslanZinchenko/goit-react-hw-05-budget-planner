@@ -1,7 +1,6 @@
-/*eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Form.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Form.module.css";
 
 const Form = ({ onSubmit = () => null, children }) => (
   <form className={styles.form} onSubmit={onSubmit}>
@@ -11,7 +10,7 @@ const Form = ({ onSubmit = () => null, children }) => (
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Form;

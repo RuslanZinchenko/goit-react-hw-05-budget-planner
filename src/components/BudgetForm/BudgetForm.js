@@ -1,22 +1,21 @@
-/*eslint-disable */
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Form from '../Form/Form';
-import Label from '../Label/Label';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
-import styles from './BudgetForm.module.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Form from "../Form/Form";
+import Label from "../Label/Label";
+import Input from "../Input/Input";
+import Button from "../Button/Button";
+import styles from "./BudgetForm.module.css";
 
 export default class BudgetForm extends Component {
-  state = { budget: '' };
+  state = { budget: "" };
 
   static propTypes = {
-    onSave: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired
   };
 
   handleChange = e => {
     this.setState({
-      budget: e.target.value,
+      budget: e.target.value
     });
   };
 
@@ -27,7 +26,7 @@ export default class BudgetForm extends Component {
 
     onSave(Number(budget).toFixed(2));
 
-    this.setState({ budget: '' });
+    this.setState({ budget: "" });
   };
 
   render() {

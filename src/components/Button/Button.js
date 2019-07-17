@@ -1,9 +1,8 @@
-/*eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Button.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Button.module.css";
 
-const Button = ({ type = 'button', label = '', onClick = () => null }) => (
+const Button = ({ type = "button", label = "", onClick = () => null }) => (
   // eslint-disable-next-line react/button-has-type
   <button className={styles.button} type={type} onClick={onClick}>
     {label}
@@ -13,13 +12,13 @@ const Button = ({ type = 'button', label = '', onClick = () => null }) => (
 Button.propTypes = {
   type: PropTypes.string,
   label: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 Button.defaultProps = {
   onClick: () => null,
-  type: 'button',
-  label: '',
+  type: "button",
+  label: ""
 };
 
 export default Button;

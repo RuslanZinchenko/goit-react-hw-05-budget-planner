@@ -1,8 +1,7 @@
-/*eslint-disable */
-import React from 'react';
-import PropTypes from 'prop-types';
-import Stat from '../Stats/Stats';
-import styles from './Values.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import Stat from "../Stats/Stats";
+import styles from "./Values.module.css";
 
 const Values = ({ budget, expenses, balance }) => (
   <div className={styles.valuesComponent}>
@@ -19,7 +18,7 @@ const Values = ({ budget, expenses, balance }) => (
 Values.propTypes = {
   budget: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   expenses: PropTypes.number.isRequired,
-  balance: PropTypes.number.isRequired,
+  balance: PropTypes.number.isRequired
 };
 
 export default Values;
