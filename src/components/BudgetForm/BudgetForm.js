@@ -15,7 +15,7 @@ export default class BudgetForm extends Component {
 
   handleChange = e => {
     this.setState({
-      budget: e.target.value,
+      budget: Math.abs(e.target.value),
     });
   };
 

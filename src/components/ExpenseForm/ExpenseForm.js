@@ -19,9 +19,15 @@ export default class ExpenseForm extends Component {
     addExpense: PropTypes.func.isRequired,
   };
 
-  handleChange = e => {
+  handleChangeName = e => {
     this.setState({
       [e.target.name]: e.target.value,
+    });
+  };
+
+  handleChangeAmount = e => {
+    this.setState({
+      [e.target.name]: Math.abs(e.target.value),
     });
   };
 
@@ -57,7 +63,7 @@ export default class ExpenseForm extends Component {
             type="text"
             name="name"
             value={name}
-            onChange={this.handleChange}
+            onChange={this.handleChangeName}
           />
         </Label>
         {incorrectName && (
@@ -69,7 +75,7 @@ export default class ExpenseForm extends Component {
             type="number"
             name="amount"
             value={amount}
-            onChange={this.handleChange}
+            onChange={this.handleChangeAmount}
           />
         </Label>
         {incorrectAmount && (
